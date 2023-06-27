@@ -1,10 +1,5 @@
-const router = require("express").Router();
-const {
-    getProducts,
-    saveProduct,
-    updateProduct,
-    deleteProduct
-} = require('../controllers/productController');
+const router = require('express').Router();
+const { getProducts, saveProduct, updateProduct, deleteProduct } = require('../controllers/productController');
 
 router.get('/', getProducts);
 
