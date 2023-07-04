@@ -17,7 +17,7 @@ COPY . .
 # COPY .env .env
 
 # expose port 5000 which is the port that our app runs on
-EXPOSE 5000
+EXPOSE 3000
 
 # specify command to run on container start
 CMD ["node", "index.js"]

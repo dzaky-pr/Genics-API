@@ -3,6 +3,13 @@ services:
   app:
     build: .
     ports:
-      - 3000:3000
+      - '3000:3000' # Mengubah port pemaparan menjadi 3000:3000
     environment:
-      - env= .env
+      - PORT=${PORT} # Mengambil nilai PORT dari .env
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
